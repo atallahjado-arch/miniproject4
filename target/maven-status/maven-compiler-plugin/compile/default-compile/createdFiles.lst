@@ -1,0 +1,16 @@
+com\miniproject\model\Product.class
+com\miniproject\store\UserStore.class
+com\miniproject\store\OrdersStore.class
+com\miniproject\store\ProductsStore.class
+com\miniproject\model\User.class
+com\miniproject\controller\ProductsController.class
+com\miniproject\store\ClientsStore.class
+com\miniproject\model\Client.class
+com\miniproject\controller\OrdersController.class
+com\miniproject\util\SceneManager.class
+com\miniproject\controller\LoginController.class
+com\miniproject\util\DBConnection.class
+com\miniproject\App.class
+com\miniproject\controller\ClientsController.class
+com\miniproject\controller\HomeController.class
+com\miniproject\model\Order.class

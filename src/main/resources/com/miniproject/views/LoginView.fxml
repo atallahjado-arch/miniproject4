@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.miniproject.controller.LoginController"
+      alignment="CENTER" spacing="0"
+      style="-fx-background-color: #1a1a2e;">
+
+    <VBox alignment="CENTER" spacing="20" maxWidth="380"
+          style="-fx-background-color: #16213e; -fx-background-radius: 12; -fx-effect: dropshadow(gaussian,rgba(0,0,0,0.5),20,0,0,4);">
+        <padding><Insets top="48" right="48" bottom="48" left="48"/></padding>
+
+        <!-- Title -->
+        <Label text="Business Manager"
+               style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #e2e8f0;"/>
+        <Label text="Sign in to continue"
+               style="-fx-font-size: 13px; -fx-text-fill: #94a3b8;"/>
+
+        <Region prefHeight="12"/>
+
+        <!-- Username -->
+        <VBox spacing="6">
+            <Label text="Username" style="-fx-text-fill: #94a3b8; -fx-font-size: 13px;"/>
+            <TextField fx:id="usernameField" promptText="Enter username"
+                       style="-fx-background-color: #0f3460; -fx-text-fill: #e2e8f0;
+                              -fx-prompt-text-fill: #475569; -fx-background-radius: 8;
+                              -fx-border-color: #334155; -fx-border-radius: 8;
+                              -fx-padding: 10 14; -fx-font-size: 14px;"/>
+        </VBox>
+
+        <!-- Password -->
+        <VBox spacing="6">
+            <Label text="Password" style="-fx-text-fill: #94a3b8; -fx-font-size: 13px;"/>
+            <PasswordField fx:id="passwordField" promptText="Enter password"
+                           style="-fx-background-color: #0f3460; -fx-text-fill: #e2e8f0;
+                                  -fx-prompt-text-fill: #475569; -fx-background-radius: 8;
+                                  -fx-border-color: #334155; -fx-border-radius: 8;
+                                  -fx-padding: 10 14; -fx-font-size: 14px;"
+                           onAction="#handleLogin"/>
+        </VBox>
+
+        <!-- Error -->
+        <Label fx:id="errorLabel" text=""
+               style="-fx-text-fill: #f87171; -fx-font-size: 12px;" wrapText="true"/>
+
+        <!-- Login button -->
+        <Button text="Sign In" onAction="#handleLogin" maxWidth="Infinity"
+                style="-fx-background-color: #4361ee; -fx-text-fill: white;
+                       -fx-font-size: 14px; -fx-font-weight: bold;
+                       -fx-background-radius: 8; -fx-padding: 12 0; -fx-cursor: hand;"/>
+
+        <Region prefHeight="8"/>
+        <Label text="Hint: alice/pass123 · bob/pass456 · charlie/pass789"
+               style="-fx-text-fill: #475569; -fx-font-size: 11px;" wrapText="true"/>
+    </VBox>
+</VBox>
